@@ -10,9 +10,16 @@ import {
 	crewQueries,
 	crewTypeDef
 } from './crew/typeDefs';
-// Aca agregen lo mismo de arriba para su servicio
-
 import crewResolvers from './crew/resolvers';
+
+// DECKS
+import {
+	deckMutations,
+	deckQueries,
+	deckTypeDef	// Aca agregen lo mismo de arriba para su servicio
+} from './deck/typeDefs';
+import deckResolvers from './deck/resolvers';
+
 // Aca agregen su servicioResolvers
 
 
@@ -20,15 +27,18 @@ import crewResolvers from './crew/resolvers';
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		crewTypeDef
+		crewTypeDef,
+		deckTypeDef,
 		// servicioTypeDef
 	],
 	[
-		crewQueries
-		// servicioQueries
+		crewQueries,
+		deckQueries,
+		// servicioQ|ueries
 	],
 	[
-		crewMutations
+		crewMutations,
+		deckMutations,
 		// servicioMutations
 	]
 );
@@ -38,7 +48,8 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		crewResolvers
+		crewResolvers,
+		deckResolvers,
 		// servicioResolvers
 	)
 });
