@@ -1,13 +1,13 @@
 export const deckTypeDef = `
 type Deck {
-    id: String!
+    _id: String!
     floor: Int!
-    meeting_schedule: String!
-    meeting_point_id: String!
+    meeting_schedule: String
+    meeting_point_id: String
 }
 input DeckInput {
     floor: Int!
-    meeting_schedule: String!
+    meeting_schedule: String
     meeting_point_id: String
 }`;
 export const deckQueries = `
@@ -25,18 +25,18 @@ export const deckMutations = `
 //cabins
 
 export const cabinTypeDef = `
-type cabin {
-    id: String!
+type Cabin {
+    _id: String!
     capacity: Int!
     category: String!
-    deck_id: String!
-    postion: String!
+    deck_id: String
+    postion: String
 }
-input cabinInput {
+input CabinInput {
     capacity: Int!
     category: String!
-    deck_id: String!
-    postion: String!
+    deck_id: String
+    position: String
 }`;
 
 export const cabinQueries = `
@@ -46,16 +46,16 @@ export const cabinQueries = `
 export const cabinMutations = `
     createCabin(cabin: CabinInput!): Cabin!
     deleteCabin(id: String!): String
-    updateCabin(id: String!, cabin: CabinInput!): cabin!
+    updateCabin(id: String!, cabin: CabinInput!): Cabin!
 `;
 
 //meting points
 export const meetingPointTypeDef = `
-type meeting_point {
-    id: String!
-    name: String!
+type MeetingPoint {
+    _id: String!
+    name: String
 }
-input meetingPointInput {
+input MeetingPointInput {
     name: String!
 }`;
 
@@ -64,7 +64,7 @@ export const meetingPointQueries = `
     meetingPointById(id: String!): MeetingPoint!
 `;
 export const meetingPointMutations = `
-    createMeetingPoint(meeting_point: meetingPointInput!): MeetingPoint!
+    createMeetingPoint(meeting_point: MeetingPointInput!): MeetingPoint!
     deleteMeetingPoint(id: String!): String
-    updateMeetingPoint(id: String!, meeting_point: MeetingPointInput!): meeting_point!
+    updateMeetingPoint(id: String!, meeting_point: MeetingPointInput!): MeetingPoint!
 `;

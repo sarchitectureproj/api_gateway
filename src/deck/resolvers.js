@@ -12,8 +12,8 @@ const resolvers = {
 			getRequest(URL_DECK, ''),
 		deckById: (_, { id }) =>
 			generalRequest(`${URL_DECK}/${id}`, 'GET'),
-		cabinsBydeckId: (_, { id }) =>
-			generalRequest(`${URL_DECK}/${id}/cabins`, 'GET'),
+		// cabinsBydeckId: (_, { id }) =>
+		// 	generalRequest(`${URL_DECK}/${id}/cabins`, 'GET'),
 		//cabins
 		allCabin: (_) =>
 			getRequest(URL_CABIN, ''),
@@ -32,13 +32,13 @@ const resolvers = {
 			generalRequest(`${URL_DECK}`, 'POST', { deck: deck }),
 		updateDeck: (_, { id, deck }) =>
 			generalRequest(`${URL_DECK}/${id}`, 'PUT', { deck: deck }),
-		deleteCrew: (_, { id }) =>
+		deleteDeck: (_, { id }) =>
 			generalRequest(`${URL_DECK}/${id}`, 'DELETE'),
 
 		//cabins
 		createCabin: (_, { cabin }) =>
 			generalRequest(`${URL_CABIN}`, 'POST', { cabin: cabin }),
-		updateCabin: (_, { id, deck }) =>
+		updateCabin: (_, { id, cabin }) =>
 			generalRequest(`${URL_CABIN}/${id}`, 'PUT', { cabin: cabin }),
 		deleteCabin: (_, { id }) =>
 			generalRequest(`${URL_CABIN}/${id}`, 'DELETE'),
