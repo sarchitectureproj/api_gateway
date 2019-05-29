@@ -8,6 +8,7 @@ services:
       #Aca ponga la IP de su nodo donde esta los servicios
       CREW_URL: '192.168.99.105'
       CREW_PORT: '4001'
+      CREW_ENTRY: 'api/crew'
       LUGGAGE_URL: '192.168.99.109'
       LUGGAGE_PORT: '4004'
     ports:
