@@ -60,9 +60,9 @@ export const categoryQueries = `
     categoryById(id: Int!): Category!
 `;
 export const categoryMutations = `
-    createCategory(luggage: CategoryInput!): Category!
+    createCategory(category: CategoryInput!): Category!
     deleteCategory(id: Int!): Int
-    updateCategory(id: Int!, tag: CategoryInput!): Category!
+    updateCategory(id: Int!, category: CategoryInput!): Category!
 `;
 
 export const deliveryQueries = `
@@ -72,5 +72,5 @@ export const deliveryQueries = `
 export const deliveryMutations = `
     createDelivery(delivery: DeliveryInput!): Delivery!
     deleteDelivery(id: Int!): Int
-    updateDelivery(id: Int!, tag: DeliveryInput!): Delivery!
+    updateDelivery(id: Int!, delivery: DeliveryInput!): Delivery!
 `;

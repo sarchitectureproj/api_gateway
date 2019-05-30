@@ -29,10 +29,10 @@ const resolvers = {
 		deleteItem: (_, { id }) =>
 			generalRequest(`${URL_ITEMS}/${id}`, 'DELETE'),
 			
-		createCategory: (_, { delivery }) =>
-			generalRequest(`${URL_CATEGORY}`, 'POST', delivery ),
-		updateCategory: (_, { id, delivery }) =>
-			generalRequest(`${URL_CATEGORY}/${id}`, 'PUT', delivery),
+		createCategory: (_, { category }) =>
+			generalRequest(`${URL_CATEGORY}`, 'POST', category ),
+		updateCategory: (_, { id, category }) =>
+			generalRequest(`${URL_CATEGORY}/${id}`, 'PUT', category),
 		deleteCategory: (_, { id }) =>
 			generalRequest(`${URL_CATEGORY}/${id}`, 'DELETE'),
 			
