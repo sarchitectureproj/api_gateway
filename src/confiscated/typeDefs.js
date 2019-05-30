@@ -40,8 +40,8 @@ type Delivery {
     delivery_point: String!
 }
 input DeliveryInput {
-    open_time: TimeType!
-    close_time: TimeType!
+    open_time: String!
+    close_time: String!
     delivery_point: String!
 }`;
 
