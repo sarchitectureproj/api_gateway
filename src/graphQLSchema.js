@@ -53,7 +53,7 @@ import{
 import crewResolvers from './crew/resolvers';
 import luggageResolvers from './luggage/resolvers';
 import passengerResolvers from './passenger/resolvers';
-import confiscatedResolvers from './passenger/resolvers';
+import confiscatedResolvers from './confiscated/resolvers';
 // Aca agregen su servicioResolvers
 
 
@@ -65,7 +65,9 @@ const mergedTypeDefs = mergeSchemas(
 		tagTypeDef,
 		luggageTypeDef,
 		passengerTypeDef,
-		confiscatedTypeDef
+		itemTypeDef,
+		categoryTypeDef,
+		deliveryTypeDef
 		// servicioTypeDef
 	],
 	[
@@ -73,7 +75,9 @@ const mergedTypeDefs = mergeSchemas(
 		tagQueries,
 		luggageQueries,
 		passengerQueries,
-		confiscatedQueries
+		itemQueries,
+		categoryQueries,
+		deliveryQueries
 		// servicioQueries
 	],
 	[
@@ -81,7 +85,9 @@ const mergedTypeDefs = mergeSchemas(
 		tagMutations,
 		luggageMutations,
 		passengerMutations,
-		confiscatedMutations
+		itemMutations,
+		categoryMutations,
+		deliveryMutations
 		// servicioMutations
 	]
 );
