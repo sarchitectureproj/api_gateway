@@ -11,5 +11,7 @@ services:
       CREW_ENTRY: 'api/crew'
       LUGGAGE_URL: '192.168.99.109'
       LUGGAGE_PORT: '4004'
+      PASSENGER_URL: '192.168.99.109'
+      PASSENGER_PORT: '4002'
     ports:
       - '5000:5000'

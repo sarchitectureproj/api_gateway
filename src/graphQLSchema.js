@@ -22,10 +22,18 @@ import{
 	tagQueries,
 	tagTypeDef
 } from './luggage/typeDefs';
+
+import{
+	passengerMutations,
+	passengerQueries,
+	passengerTypeDef
+} from './passenger/typeDefs';
+
 // Aca agregen lo mismo de arriba para su servicio
 
 import crewResolvers from './crew/resolvers';
 import luggageResolvers from './luggage/resolvers';
+import passengerResolvers from './passenger/resolvers';
 // Aca agregen su servicioResolvers
 
 
@@ -35,20 +43,22 @@ const mergedTypeDefs = mergeSchemas(
 		'scalar JSON',
 		crewTypeDef,
 		tagTypeDef,
-		luggageTypeDef
+		luggageTypeDef,
+		passengerTypeDef
 		// servicioTypeDef
 	],
 	[
 		crewQueries,
 		tagQueries,
-		luggageQueries
+		luggageQueries,
+		passengerQueries
 		// servicioQueries
 	],
 	[
 		crewMutations,
 		tagMutations,
-		luggageMutations
-		
+		luggageMutations,
+		passengerMutations
 		// servicioMutations
 	]
 );
@@ -59,7 +69,8 @@ export default makeExecutableSchema({
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
 		crewResolvers,
-		luggageResolvers
+		luggageResolvers,
+		passengerResolvers
 		// servicioResolvers
 	)
 });
