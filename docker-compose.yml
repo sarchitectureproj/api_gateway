@@ -13,5 +13,7 @@ services:
       LUGGAGE_PORT: '4004'
       PASSENGER_URL: '192.168.99.109'
       PASSENGER_PORT: '4002'
+      CONFISCATED_URL: '54.172.21.255'
+      CONFISCATED_PORT: '4003'
     ports:
       - '5000:5000'

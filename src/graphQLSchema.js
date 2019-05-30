@@ -29,11 +29,31 @@ import{
 	passengerTypeDef
 } from './passenger/typeDefs';
 
+import{
+	itemMutations,
+	itemQueries,
+	itemTypeDef
+} from './confiscated/typeDefs';
+
+import{
+	categoryMutations,
+	categoryQueries,
+	categoryTypeDef
+} from './confiscated/typeDefs';
+
+import{
+	deliveryMutations,
+	deliveryQueries,
+	deliveryTypeDef
+} from './confiscated/typeDefs';
+
+
 // Aca agregen lo mismo de arriba para su servicio
 
 import crewResolvers from './crew/resolvers';
 import luggageResolvers from './luggage/resolvers';
 import passengerResolvers from './passenger/resolvers';
+import confiscatedResolvers from './passenger/resolvers';
 // Aca agregen su servicioResolvers
 
 
@@ -44,21 +64,24 @@ const mergedTypeDefs = mergeSchemas(
 		crewTypeDef,
 		tagTypeDef,
 		luggageTypeDef,
-		passengerTypeDef
+		passengerTypeDef,
+		confiscatedTypeDef
 		// servicioTypeDef
 	],
 	[
 		crewQueries,
 		tagQueries,
 		luggageQueries,
-		passengerQueries
+		passengerQueries,
+		confiscatedQueries
 		// servicioQueries
 	],
 	[
 		crewMutations,
 		tagMutations,
 		luggageMutations,
-		passengerMutations
+		passengerMutations,
+		confiscatedMutations
 		// servicioMutations
 	]
 );
@@ -70,7 +93,8 @@ export default makeExecutableSchema({
 		{ JSON: GraphQLJSON }, // allows scalar JSON
 		crewResolvers,
 		luggageResolvers,
-		passengerResolvers
+		passengerResolvers,
+		confiscatedResolvers
 		// servicioResolvers
 	)
 });
