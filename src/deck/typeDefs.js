@@ -13,6 +13,7 @@ input DeckInput {
 export const deckQueries = `
     allDeck: [Deck]!
     deckById(id: String!): Deck!
+    cabinsBydeckId(id: String!): [Cabin!]
 `;
 
 export const deckMutations = `

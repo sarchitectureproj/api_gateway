@@ -12,8 +12,8 @@ const resolvers = {
 			getRequest(URL_DECK, ''),
 		deckById: (_, { id }) =>
 			generalRequest(`${URL_DECK}/${id}`, 'GET'),
-		// cabinsBydeckId: (_, { id }) =>
-		// 	generalRequest(`${URL_DECK}/${id}/cabins`, 'GET'),
+		cabinsBydeckId: (_, { id }) =>
+		 	generalRequest(`${URL_DECK}/${id}/cabins`, 'GET'),
 		//cabins
 		allCabin: (_) =>
 			getRequest(URL_CABIN, ''),
