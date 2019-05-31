@@ -47,6 +47,22 @@ import{
 	deliveryTypeDef
 } from './confiscated/typeDefs';
 
+import {
+	deckMutations,
+	deckQueries,
+	deckTypeDef,
+
+	cabinMutations,
+	cabinQueries,
+	cabinTypeDef,
+	
+	meetingPointMutations,
+	meetingPointQueries,
+	meetingPointTypeDef,
+	// Aca agregen lo mismo de arriba para su servicio
+} from './deck/typeDefs';
+import deckResolvers from './deck/resolvers';
+
 
 // Aca agregen lo mismo de arriba para su servicio
 
@@ -54,6 +70,8 @@ import crewResolvers from './crew/resolvers';
 import luggageResolvers from './luggage/resolvers';
 import passengerResolvers from './passenger/resolvers';
 import confiscatedResolvers from './confiscated/resolvers';
+import crewResolvers from './crew/resolvers';
+
 // Aca agregen su servicioResolvers
 
 
@@ -67,7 +85,10 @@ const mergedTypeDefs = mergeSchemas(
 		passengerTypeDef,
 		itemTypeDef,
 		categoryTypeDef,
-		deliveryTypeDef
+		deliveryTypeDef,		
+		deckTypeDef,
+		cabinTypeDef,
+		meetingPointTypeDef,
 		// servicioTypeDef
 	],
 	[
@@ -77,7 +98,10 @@ const mergedTypeDefs = mergeSchemas(
 		passengerQueries,
 		itemQueries,
 		categoryQueries,
-		deliveryQueries
+		deliveryQueries,
+		deckQueries,
+		cabinQueries,
+		meetingPointQueries,
 		// servicioQueries
 	],
 	[
@@ -87,7 +111,10 @@ const mergedTypeDefs = mergeSchemas(
 		passengerMutations,
 		itemMutations,
 		categoryMutations,
-		deliveryMutations
+		deliveryMutations,
+		deckMutations,
+		cabinMutations,
+		meetingPointMutations,
 		// servicioMutations
 	]
 );
@@ -100,7 +127,8 @@ export default makeExecutableSchema({
 		crewResolvers,
 		luggageResolvers,
 		passengerResolvers,
-		confiscatedResolvers
+		confiscatedResolvers,
+		deckResolvers,
 		// servicioResolvers
 	)
 });
