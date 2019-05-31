@@ -6,7 +6,7 @@ type Item {
     confiscation_time: String
     quantity: Int!
     category: Int!
-    passenger: Int!
+    passenger: String!
 }
 input ItemInput {
     name: String!
@@ -14,7 +14,7 @@ input ItemInput {
     confiscation_time: String
     quantity: Int!
     category: Int!
-    passenger: Int!
+    passenger: String!
 }`;
 
 export const categoryTypeDef = `
