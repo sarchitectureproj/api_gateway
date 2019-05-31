@@ -61,7 +61,6 @@ import {
 	meetingPointTypeDef,
 	// Aca agregen lo mismo de arriba para su servicio
 } from './deck/typeDefs';
-import deckResolvers from './deck/resolvers';
 
 
 // Aca agregen lo mismo de arriba para su servicio
@@ -70,7 +69,8 @@ import crewResolvers from './crew/resolvers';
 import luggageResolvers from './luggage/resolvers';
 import passengerResolvers from './passenger/resolvers';
 import confiscatedResolvers from './confiscated/resolvers';
-import crewResolvers from './crew/resolvers';
+import deckResolvers from './deck/resolvers';
+
 
 // Aca agregen su servicioResolvers
 
