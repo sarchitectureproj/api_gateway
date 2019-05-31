@@ -13,10 +13,12 @@ type Luggage {
     id: Int!
     weight: Int!
     status: Int!
+    tag_id: Int!
 }
 input LuggageInput {
     weight: Int!
     status: Int!
+    tag_id: Int!
     
 }`;
 export const tagQueries = `
