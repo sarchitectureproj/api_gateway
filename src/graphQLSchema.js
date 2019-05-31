@@ -22,10 +22,56 @@ import{
 	tagQueries,
 	tagTypeDef
 } from './luggage/typeDefs';
+
+import{
+	passengerMutations,
+	passengerQueries,
+	passengerTypeDef
+} from './passenger/typeDefs';
+
+import{
+	itemMutations,
+	itemQueries,
+	itemTypeDef
+} from './confiscated/typeDefs';
+
+import{
+	categoryMutations,
+	categoryQueries,
+	categoryTypeDef
+} from './confiscated/typeDefs';
+
+import{
+	deliveryMutations,
+	deliveryQueries,
+	deliveryTypeDef
+} from './confiscated/typeDefs';
+
+import {
+	deckMutations,
+	deckQueries,
+	deckTypeDef,
+
+	cabinMutations,
+	cabinQueries,
+	cabinTypeDef,
+	
+	meetingPointMutations,
+	meetingPointQueries,
+	meetingPointTypeDef,
+	// Aca agregen lo mismo de arriba para su servicio
+} from './deck/typeDefs';
+
+
 // Aca agregen lo mismo de arriba para su servicio
 
 import crewResolvers from './crew/resolvers';
 import luggageResolvers from './luggage/resolvers';
+import passengerResolvers from './passenger/resolvers';
+import confiscatedResolvers from './confiscated/resolvers';
+import deckResolvers from './deck/resolvers';
+
+
 // Aca agregen su servicioResolvers
 
 
@@ -35,20 +81,40 @@ const mergedTypeDefs = mergeSchemas(
 		'scalar JSON',
 		crewTypeDef,
 		tagTypeDef,
-		luggageTypeDef
+		luggageTypeDef,
+		passengerTypeDef,
+		itemTypeDef,
+		categoryTypeDef,
+		deliveryTypeDef,		
+		deckTypeDef,
+		cabinTypeDef,
+		meetingPointTypeDef,
 		// servicioTypeDef
 	],
 	[
 		crewQueries,
 		tagQueries,
-		luggageQueries
+		luggageQueries,
+		passengerQueries,
+		itemQueries,
+		categoryQueries,
+		deliveryQueries,
+		deckQueries,
+		cabinQueries,
+		meetingPointQueries,
 		// servicioQueries
 	],
 	[
 		crewMutations,
 		tagMutations,
-		luggageMutations
-		
+		luggageMutations,
+		passengerMutations,
+		itemMutations,
+		categoryMutations,
+		deliveryMutations,
+		deckMutations,
+		cabinMutations,
+		meetingPointMutations,
 		// servicioMutations
 	]
 );
@@ -59,7 +125,10 @@ export default makeExecutableSchema({
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
 		crewResolvers,
-		luggageResolvers
+		luggageResolvers,
+		passengerResolvers,
+		confiscatedResolvers,
+		deckResolvers,
 		// servicioResolvers
 	)
 });
