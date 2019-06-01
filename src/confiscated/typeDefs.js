@@ -47,6 +47,7 @@ input DeliveryInput {
 
 export const itemQueries = `
     allItems: [Item]!
+    allItemsbyPass(passenger: String!): [Item]!
     itemById(id: Int!): Item!
 `;
 export const itemMutations = `
