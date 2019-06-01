@@ -1,11 +1,11 @@
 export const tagTypeDef = `
 type Tag {
     id: Int!
-    passenger_id: Int!
+    passenger_id: String!
     cabin_id: String!
 }
 input TagInput {
-    passenger_id: Int!
+    passenger_id: String!
     cabin_id: String!
 }`;
 export const luggageTypeDef = `
@@ -13,17 +13,18 @@ type Luggage {
     id: Int!
     weight: Int!
     status: Int!
+    tag_id: Int!
 }
 input LuggageInput {
     weight: Int!
     status: Int!
+    tag_id: Int!
     
 }`;
 export const tagQueries = `
     allTags: [Tag]!
     tagById(id: Int!): Tag!
 `;
-
 export const tagMutations = `
     createTag(tag: TagInput!): Tag!
     deleteTag(id: Int!): Int
