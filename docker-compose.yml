@@ -5,13 +5,17 @@ services:
     environment:
       PORT: '5000'
       SHOW_URLS: 'true'
-      URL: 'desemnode0.westus.cloudapp.azure.com'
       #Aca ponga la IP de su nodo donde esta los servicios
+      CREW_URL: '192.168.99.105'
       CREW_PORT: '4001'
-      DECK_PORT: '4005'
       CREW_ENTRY: 'api/crew'
+      DECK_URL: '192.168.99.105'
+      DECK_PORT: '4005'
+      LUGGAGE_URL: '192.168.99.105'
       LUGGAGE_PORT: '4004'
+      PASSENGER_URL: '192.168.99.105'
       PASSENGER_PORT: '4002'
+      CONFISCATED_URL: '192.168.99.105'
       CONFISCATED_PORT: '4003'
     ports:
       - '5000:5000'
