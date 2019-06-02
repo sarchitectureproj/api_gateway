@@ -9,6 +9,8 @@ const resolvers = {
 	Query: {
 		allItems: (_) =>
 			getRequest(URL_ITEMS, ''),
+		allItemsbyPass: (_, { passenger }) =>
+			generalRequest(`${URL_ITEMS}/?passenger=${passenger}`, 'GET'),
 		itemById: (_, { id }) =>
 			generalRequest(`${URL_ITEMS}/${id}`, 'GET'),
 		allCategories: (_) =>
