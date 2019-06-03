@@ -28,7 +28,7 @@ input PassengerInput {
 
 export const passengerQueries = `
     allPassengers: [Passenger]!
-    passengerById(id: Int!): Passenger!
+    passengerById(id: String!): Passenger!
 `;
 
 export const passengerMutations = `
