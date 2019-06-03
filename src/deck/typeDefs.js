@@ -31,7 +31,7 @@ type Cabin {
     capacity: Int!
     category: String!
     deck_id: String
-    postion: String
+    position: String
 }
 input CabinInput {
     capacity: Int!
