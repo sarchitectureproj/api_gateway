@@ -12,7 +12,7 @@ export const luggageTypeDef = `
 type Luggage {
     id: Int!
     weight: Int!
-    status: Int!
+    status: String!
     tag_id: Int!
 }
 input LuggageInput {
