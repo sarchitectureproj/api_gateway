@@ -10,8 +10,8 @@ type Item {
 input ItemInput {
     name: String!
     confiscation_date: String
-    quantity: Int!
     units: Int!
+    category: Int!
     passenger: String!
 }`;
 
