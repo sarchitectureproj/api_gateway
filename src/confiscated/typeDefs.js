@@ -3,16 +3,14 @@ type Item {
     id: Int!
     name: String!
     confiscation_date: String
-    confiscation_time: String
-    quantity: Int!
+    units: Int!
     category: Int!
     passenger: String!
 }
 input ItemInput {
     name: String!
     confiscation_date: String
-    confiscation_time: String
-    quantity: Int!
+    units: Int!
     category: Int!
     passenger: String!
 }`;
