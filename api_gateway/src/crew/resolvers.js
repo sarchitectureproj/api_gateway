@@ -34,7 +34,7 @@ const resolvers = {
 			// let pass = decrypt(credentials.password);
 			// credentials.password = pass;
 			let res = await	generalRequest(`${URL_AUTH}`, 'POST', credentials)
-			console.log(res)
+			//console.log(res)
 			if(res){
 				if(res === 'Ok'){
 					var token = await jwt.sign({username: res}, 'Secret Password', {expiresIn: 60 * 60 * 24})
