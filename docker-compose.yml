@@ -11,9 +11,9 @@ services:
    build: api_gateway/.
    container_name: api-gateway
    environment:
-     CREW_URL: 'dnode0.centralus.cloudapp.azure.com'
+     CREW_URL: 'dnode1.centralus.cloudapp.azure.com'
      CREW_PORT: '4001'
-     CREW_ENTRY: 'api/crew'
+     CREW_ENTRY: 'api'
      DECK_URL: 'dnode1.centralus.cloudapp.azure.com'
      DECK_PORT: '4005'
      LUGGAGE_URL: 'dnode1.centralus.cloudapp.azure.com'

@@ -13,6 +13,10 @@ input CrewInput {
     name: String!
     email: String!
     role: String!
+}
+input LoginInput {
+    username: String!
+    password: String!
 }`;
 
 export const crewQueries = `
@@ -24,4 +28,5 @@ export const crewMutations = `
     createCrew(crew: CrewInput!): Crew!
     deleteCrew(id: Int!): Int
     updateCrew(id: Int!, crew: CrewInput!): Crew!
+    login(credentials: LoginInput!): String!
 `;
