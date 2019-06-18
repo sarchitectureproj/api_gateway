@@ -14,9 +14,9 @@ const resolvers = {
 		createPassenger: (_, { passenger }) =>
 			generalRequest(`${URL}`, 'POST', passenger),
 		updatePassenger: (_, { id, passenger }) =>
-			generalRequest(`${URL}/${id}`, 'PUT'),
+			generalRequest(`${URL}/${id}`, 'PUT', passenger),
 		deletePassenger: (_, { id }) =>
-            generalRequest(`${URL}/${id}`, 'DELETE'),
+            		generalRequest(`${URL}/${id}`, 'DELETE'),
 	}
 };
 

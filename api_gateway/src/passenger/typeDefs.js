@@ -34,5 +34,5 @@ export const passengerQueries = `
 export const passengerMutations = `
     createPassenger(passenger: PassengerInput!): Passenger!
     deletePassenger(id: String!): String
-    updatePassenger(id: String!, passenger: PassengerInput!): String
+    updatePassenger(id: String!, passenger: PassengerInput!): String!
 `;
