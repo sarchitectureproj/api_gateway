@@ -1,21 +1,21 @@
 version: '2'
 services:
-  academy-api:
+  api-gateway:
     build: .
     environment:
       PORT: '5000'
       SHOW_URLS: 'true'
       #Aca ponga la IP de su nodo donde esta los servicios
-      CREW_URL: 'dnode1.centralus.cloudapp.azure.com'
+      CREW_URL: 'dnode2.centralus.cloudapp.azure.com'
       CREW_PORT: '3001'
-      CREW_ENTRY: 'api/crew'
-      DECK_URL: 'dnode1.centralus.cloudapp.azure.com'
+      CREW_ENTRY: 'api'
+      DECK_URL: 'dnode2.centralus.cloudapp.azure.com'
       DECK_PORT: '3005'
-      LUGGAGE_URL: 'dnode1.centralus.cloudapp.azure.com'
+      LUGGAGE_URL: 'dnode2.centralus.cloudapp.azure.com'
       LUGGAGE_PORT: '3004'
-      PASSENGER_URL: 'dnode1.centralus.cloudapp.azure.com'
+      PASSENGER_URL: 'dnode2.centralus.cloudapp.azure.com'
       PASSENGER_PORT: '3002'
-      CONFISCATED_URL: 'dnode1.centralus.cloudapp.azure.com'
+      CONFISCATED_URL: 'dnode2.centralus.cloudapp.azure.com'
       CONFISCATED_PORT: '3003'
     ports:
       - '5000:5000'
